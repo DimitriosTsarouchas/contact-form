@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Survey Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please, tell us how we can improve the user experience of our website.</p>
+  </header>
+
+  <!-- Survey Form -->
+  <form id="survey-form">
+
+    <!-- Name, Email, Age -->
+    <label for="name" id="name-label">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" autofocus required>
+
+    <label for="email" id="email-label">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+
+
+    <label for="number" id="number-label">Age:</label>
+    <input type="number" id="number" min="0" max="100" placeholder="min: 0, max: 100" required>
+    <span class="validity"></span>
+
+
+    <!-- Roles -->
+    <p>Select your current role:</p>
+    <select name="role" id="dropdown">
+      <option value="0" disabled>Select a role</option>
+      <option value="client">Client</option>
+      <option value="designer">Designer</option>
+      <option value="developer">Developer</option>
+      <option value="ui-ux">UI/UX</option>
+      <option value="project-manager">Project Manager</option>
+    </select>
+
+    <!-- Website usage -->
+    <p>How often do you use the website:</p>
+    <div class="radio">
+      <input type="radio" name="radio" id="seldom">
+      <label for="seldom" class="select">Seldom</label>
+      <br>
+      <input type="radio" name="radio" id="regularly">
+      <label for="regularly" class="select">Regularly</label>
+      <br>
+      <input type="radio" name="radio" id="always">
+      <label for="always" class="select">Always</label>
+    </div>
+
+    <!-- Functionallity -->
+    <p>What functionallity must be added:</p>
+    <div class="check">
+      <input type="checkbox" name="cta" id="cta" value="cta">
+      <label for="cta" class="select">Call to action</label>
+      <br>
+      <input type="checkbox" name="banner" id="banner" value="banner">
+      <label for="banner" class="select">Banner</label>
+      <br>
+      <input type="checkbox" name="subscription-form" id="subscription-form" value="subscription-form">
+      <label for="subscription-form" class="select">Subscription form</label>
+      <br>
+      <input type="checkbox" name="popup" id="popup" value="popup">
+      <label for="popup" class="select">Popup</label>
+    </div>
+
+    <!-- Recommendations -->
+    <p id="recommendations">
+      Please tell us what else can be improved in order too meet your needs:
+    </p>
+    <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Write your recommedations here..."></textarea>
+
+    <!-- Submit -->
+    <a href="#" class="btn" id="submit">Submit your answer</a>
+
+  </form><!-- End Survey Form -->
+</body>
+
+</html>
